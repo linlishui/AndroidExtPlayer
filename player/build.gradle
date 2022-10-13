@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 32
+    buildToolsVersion '32.0.0'
+
+    defaultConfig {
+        minSdkVersion 24
+        targetSdkVersion 32
+
+        buildConfigField "boolean", "USE_DECODER_EXTENSIONS", "false"
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'io.github.linlishui:router:0.0.2'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.exoplayer:exoplayer:2.14.2'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'org.chromium.net:cronet-embedded:95.4638.50'
+}
+
+if (UPLOAD_LOCAL.toBoolean()) {
+    apply from: '../local_publish.gradle'
+} else {
+    apply from: '../maven-publish.gradle'
+}

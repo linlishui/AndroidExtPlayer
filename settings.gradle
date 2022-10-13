@@ -1,0 +1,3 @@
+rootProject.name = "LibPlayer"
+include ':app'
+include ':player'
