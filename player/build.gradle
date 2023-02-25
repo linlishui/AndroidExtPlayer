@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 32
-    buildToolsVersion '32.0.0'
+    compileSdkVersion 33
+    buildToolsVersion '33.0.0'
 
     defaultConfig {
         minSdkVersion 24
-        targetSdkVersion 32
+        targetSdkVersion 33
 
         buildConfigField "boolean", "USE_DECODER_EXTENSIONS", "false"
     }
@@ -25,10 +25,13 @@ android {
 dependencies {
 
     implementation 'io.github.linlishui:router:0.0.2'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.exoplayer:exoplayer:2.14.2'
-    implementation 'com.google.android.material:material:1.4.0'
-    implementation 'org.chromium.net:cronet-embedded:95.4638.50'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+
+    implementation 'com.google.android.exoplayer:exoplayer:2.18.3'
+    implementation 'com.google.android.exoplayer:extension-ima:2.18.3'
+    implementation 'com.google.android.exoplayer:extension-cronet:2.18.3'
+    implementation 'org.chromium.net:cronet-embedded:108.5359.79'
 }
 
 if (UPLOAD_LOCAL.toBoolean()) {

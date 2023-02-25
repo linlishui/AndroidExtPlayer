@@ -1,3 +1,3 @@
-rootProject.name = "LibPlayer"
+rootProject.name = "videoplayer"
 include ':app'
 include ':player'

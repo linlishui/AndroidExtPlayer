@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="lishui.service.player.app">
+    package="android.lib.player.app">
 
     <application
-        android:name=".PlayerApp"
+        android:name="android.lib.player.app.PlayerApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,7 +12,7 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/PlayerAppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="android.lib.player.app.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

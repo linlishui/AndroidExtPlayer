@@ -1,4 +1,4 @@
-package lishui.service.player.app;
+package android.lib.player.app;
 
 import android.app.Application;
 

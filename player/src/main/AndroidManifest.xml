@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="lishui.service.player">
+    package="android.lib.player">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -11,7 +11,7 @@
     <application>
 
         <activity
-            android:name=".PlayerActivity"
+            android:name="android.lib.player.PlayerActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
             android:exported="true"
             android:launchMode="singleTop"
@@ -33,10 +33,10 @@
         </activity>
 
         <service
-            android:name=".misc.VideoDownloadService"
+            android:name="android.lib.player.download.VideoDownloadService"
             android:exported="false">
             <intent-filter>
-                <action android:name="lishui.service.player.downloadService.action.RESTART" />
+                <action android:name="android.lib.player.downloadService.action.RESTART" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </service>

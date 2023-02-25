@@ -1,4 +1,4 @@
-package lishui.service.player;
+package android.lib.player;
 
 import lishui.lib.router.table.RouteType;
 import lishui.lib.router.table.RouterItem;
