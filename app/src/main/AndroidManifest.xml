@@ -3,14 +3,13 @@
     package="android.lib.player.app">
 
     <application
-        android:name="android.lib.player.app.PlayerApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/PlayerAppTheme">
+        android:theme="@style/PlayerAppTheme"
+        android:usesCleartextTraffic="true">
         <activity
             android:name="android.lib.player.app.MainActivity"
             android:exported="true">

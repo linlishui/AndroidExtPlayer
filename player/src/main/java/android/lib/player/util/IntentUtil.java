@@ -29,9 +29,8 @@ import java.util.UUID;
 public class IntentUtil {
 
     // Actions.
-
-    public static final String ACTION_VIEW = "lishui.service.player.action.VIEW";
-    public static final String ACTION_VIEW_LIST = "lishui.service.player.action.VIEW_LIST";
+    public static final String ACTION_VIEW = "android.lib.player.action.VIEW";
+    public static final String ACTION_VIEW_LIST = "android.lib.player.action.VIEW_LIST";
 
     // Activity extras.
     public static final String PREFER_EXTENSION_DECODERS_EXTRA = "prefer_extension_decoders";

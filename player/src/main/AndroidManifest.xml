@@ -17,7 +17,7 @@
             android:launchMode="singleTop"
             android:theme="@style/PlayerTheme">
             <intent-filter>
-                <action android:name="lishui.service.player.action.VIEW" />
+                <action android:name="android.lib.player.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data android:scheme="http" />
@@ -27,7 +27,7 @@
                 <data android:scheme="file" />
             </intent-filter>
             <intent-filter>
-                <action android:name="lishui.service.player.action.VIEW_LIST" />
+                <action android:name="android.lib.player.action.VIEW_LIST" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

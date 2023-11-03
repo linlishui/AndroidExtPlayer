@@ -1,10 +1,13 @@
 package android.lib.player;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.lib.player.download.VideoDownloadTracker;
 import android.lib.player.util.IntentUtil;
 import android.lib.player.util.VideoUtil;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Pair;
@@ -49,8 +52,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import android.lib.player.R;
-
 /**
  * An activity that plays media using {@link ExoPlayer}.
  */
@@ -93,7 +94,16 @@ public class PlayerActivity extends AppCompatActivity
 
     private ImaServerSideAdInsertionMediaSource.AdsLoader.State serverSideAdsLoaderState;
 
-    // Activity lifecycle.
+
+    public static void start(Context context, String url) {
+        Intent intent = new Intent(context, PlayerActivity.class);
+        intent.setAction(IntentUtil.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        if (!(context instanceof Activity)) {
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        }
+        context.startActivity(intent);
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
