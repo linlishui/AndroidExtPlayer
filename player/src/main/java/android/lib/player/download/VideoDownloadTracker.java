@@ -42,8 +42,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.concurrent.CopyOnWriteArraySet;
 
-import android.lib.player.R;
-
 /**
  * Tracks media that has been downloaded.
  */

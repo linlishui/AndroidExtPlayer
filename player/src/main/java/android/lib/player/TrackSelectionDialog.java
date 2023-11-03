@@ -34,8 +34,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import android.lib.player.R;
-
 /**
  * Dialog to select tracks.
  */
@@ -235,8 +233,7 @@ public final class TrackSelectionDialog extends DialogFragment {
     }
 
     @Override
-    public View onCreateView(
-            LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View dialogView = inflater.inflate(R.layout.track_selection_dialog, container, false);
         TabLayout tabLayout = dialogView.findViewById(R.id.track_selection_dialog_tab_layout);
         ViewPager viewPager = dialogView.findViewById(R.id.track_selection_dialog_view_pager);
